@@ -1,0 +1,546 @@
+
+/* LIFEOS — EMERGENCY LAYOUT RESTORE */
+
+#root {
+  min-height: 100vh;
+  width: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100%;
+  margin: 0;
+}
+
+body {
+  color: #39334d;
+  background: #faf8f7;
+}
+
+.lifeos-app {
+  display: flex !important;
+  flex-direction: row !important;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.lifeos-sidebar {
+  display: flex !important;
+  flex: 0 0 290px !important;
+  flex-direction: column !important;
+  align-self: stretch;
+  min-height: 100vh;
+  padding: 20px 13px 16px;
+  border-right: 1px solid #e9e1f2;
+  background: #fffdfd;
+}
+
+.lifeos-sidebar-brand {
+  display: block;
+  padding: 0 8px 42px;
+}
+
+.lifeos-brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  text-decoration: none;
+  color: #39334d;
+}
+
+.lifeos-brand-mark {
+  position: relative;
+  display: grid;
+  flex: 0 0 58px;
+  place-items: center;
+  width: 58px;
+  height: 58px;
+  border: 1px solid #e1d5f7;
+  border-radius: 20px;
+  background: #f0eafd;
+  color: #8067bd;
+}
+
+.lifeos-brand-dot {
+  position: absolute;
+  right: -4px;
+  bottom: -2px;
+  width: 11px;
+  height: 11px;
+  border: 2px solid white;
+  border-radius: 50%;
+  background: #8aaf96;
+}
+
+.lifeos-brand-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.lifeos-brand-name {
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: -1px;
+}
+
+.lifeos-brand-name span {
+  color: #8b76c8;
+}
+
+.lifeos-brand-tagline {
+  color: #a39ab5;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.lifeos-sidebar-label {
+  margin: 4px 13px 18px;
+  color: #a39ab5;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.lifeos-navigation {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.lifeos-nav-link {
+  position: relative;
+  display: flex !important;
+  align-items: center;
+  gap: 13px;
+  min-height: 53px;
+  padding: 0 14px;
+  border: 1px solid transparent;
+  border-radius: 15px;
+  color: #39334d;
+  font-size: 14px;
+  text-decoration: none;
+  transition: background 180ms ease, transform 180ms ease;
+}
+
+.lifeos-nav-link > svg:first-child {
+  flex-shrink: 0;
+  color: #a097b8;
+}
+
+.lifeos-nav-link:hover {
+  background: #f7f2ff;
+}
+
+.lifeos-nav-link--active {
+  border-color: #e5d9f7;
+  background: #f3edff;
+}
+
+.lifeos-nav-chevron {
+  margin-left: auto;
+  opacity: 0;
+}
+
+.lifeos-nav-link--active .lifeos-nav-chevron,
+.lifeos-nav-link:hover .lifeos-nav-chevron {
+  opacity: 1;
+}
+
+.lifeos-sidebar-spacer {
+  flex: 1 0 24px;
+}
+
+.lifeos-inspiration {
+  position: relative;
+  overflow: hidden;
+  padding: 18px;
+  border: 1px solid #e5daf5;
+  border-radius: 25px;
+  background: linear-gradient(145deg, #f3edff, #fff9f2 65%, #e9f3eb);
+}
+
+.lifeos-inspiration-decoration {
+  position: absolute;
+  top: -30px;
+  right: -25px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: #e7dcf8;
+}
+
+.lifeos-inspiration-decoration span {
+  position: absolute;
+  top: 100px;
+  left: -120px;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: #dcebdd;
+}
+
+.lifeos-inspiration-top {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.lifeos-inspiration-icon {
+  display: grid;
+  place-items: center;
+  width: 43px;
+  height: 43px;
+  border-radius: 14px;
+  background: white;
+  color: #8970c7;
+}
+
+.lifeos-inspiration-pill {
+  padding: 7px 10px;
+  border-radius: 20px;
+  background: rgba(255,255,255,.8);
+  color: #8772b7;
+  font-size: 10px;
+}
+
+.lifeos-inspiration h2 {
+  position: relative;
+  max-width: 190px;
+  margin: 0;
+  color: #514466;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.lifeos-inspiration > p {
+  position: relative;
+  max-width: 190px;
+  margin-top: 9px;
+  color: #81778f;
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+.lifeos-inspiration-footer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin-top: 20px;
+  color: #66876e;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.lifeos-inspiration-plant {
+  position: absolute;
+  right: 8px;
+  bottom: 8px;
+  width: 42px;
+  height: 65px;
+}
+
+.lifeos-sidebar-footer {
+  padding: 24px 9px 0;
+  color: #a39ab5;
+  font-size: 10px;
+  letter-spacing: 1px;
+}
+
+.lifeos-main {
+  display: flex !important;
+  flex: 1 1 auto !important;
+  flex-direction: column !important;
+  min-width: 0;
+  min-height: 100vh;
+}
+
+.lifeos-topbar {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  display: flex !important;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  min-height: 80px;
+  padding: 14px 28px;
+  border-bottom: 1px solid #e9e1f2;
+  background: rgba(255,253,253,.94);
+  backdrop-filter: blur(16px);
+}
+
+.lifeos-topbar-heading {
+  min-width: 0;
+}
+
+.lifeos-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #827990;
+  font-size: 12px;
+}
+
+.lifeos-breadcrumb strong {
+  color: #39334d;
+}
+
+.lifeos-topbar-heading > p {
+  margin-top: 6px;
+  color: #827990;
+  font-size: 13px;
+}
+
+.lifeos-topbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.lifeos-status-pill {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 11px 14px;
+  border: 1px solid #dceadd;
+  border-radius: 30px;
+  background: #f0f7f0;
+  color: #64836a;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.lifeos-status-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #8aaf96;
+}
+
+.lifeos-theme-toggle,
+.lifeos-mobile-menu-button {
+  display: grid;
+  flex: 0 0 auto;
+  place-items: center;
+  width: 46px;
+  height: 46px;
+  border: 1px solid #e5daf5;
+  border-radius: 50%;
+  background: #f0eafd;
+  color: #8067bd;
+  cursor: pointer;
+}
+
+.lifeos-content {
+  display: block;
+  flex: 1 0 auto;
+  width: 100%;
+  max-width: 1680px;
+  margin: 0 auto;
+  padding: 28px;
+  color: #39334d;
+}
+
+.lifeos-content > * {
+  max-width: 100%;
+}
+
+.lifeos-app-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin: 0 28px;
+  padding: 20px 0;
+  border-top: 1px solid #e9e1f2;
+  color: #827990;
+  font-size: 11px;
+}
+
+.lifeos-footer-sparkle {
+  display: inline-flex;
+  color: #8870c7;
+}
+
+.lifeos-mobile-menu,
+.lifeos-mobile-menu-button {
+  display: none;
+}
+
+/* Prevent decorative artwork from becoming oversized */
+.lifeos-sidebar svg,
+.lifeos-brand-mark svg,
+.lifeos-inspiration-icon svg,
+.lifeos-inspiration-plant {
+  max-width: 100%;
+}
+
+.overview-page img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Remove the large decorative flower/artwork in the overview affirmation */
+.overview-affirmation-art {
+  display: none !important;
+}
+
+/* Restore readable form controls and dropdowns */
+.lifeos-app input,
+.lifeos-app select,
+.lifeos-app textarea {
+  color: #39334d;
+}
+
+.lifeos-app select {
+  color-scheme: light;
+  background-color: #fffdfd;
+  border: 1px solid #e5daf5;
+}
+
+.lifeos-app select option {
+  color: #39334d;
+  background: #fffdfd;
+}
+
+.lifeos-app input::placeholder,
+.lifeos-app textarea::placeholder {
+  color: #91879f;
+  opacity: 1;
+}
+
+/* Respect dark theme */
+html[data-theme="dark"] body {
+  color: #f1edf8;
+  background: #211e2a;
+}
+
+html[data-theme="dark"] .lifeos-sidebar,
+html[data-theme="dark"] .lifeos-topbar,
+html[data-theme="dark"] .lifeos-mobile-menu {
+  background: #282431;
+  border-color: #41394d;
+}
+
+html[data-theme="dark"] .lifeos-nav-link,
+html[data-theme="dark"] .lifeos-breadcrumb strong,
+html[data-theme="dark"] .lifeos-content {
+  color: #f1edf8;
+}
+
+html[data-theme="dark"] .lifeos-nav-link--active {
+  background: #39304b;
+  border-color: #51436c;
+}
+
+html[data-theme="dark"] .lifeos-inspiration {
+  background: linear-gradient(145deg, #342c48, #302b3b 65%, #26352e);
+  border-color: #51465d;
+}
+
+html[data-theme="dark"] .lifeos-inspiration h2 {
+  color: #f1edf8;
+}
+
+html[data-theme="dark"] .lifeos-inspiration > p {
+  color: #c0b6ce;
+}
+
+html[data-theme="dark"] .lifeos-sidebar-footer,
+html[data-theme="dark"] .lifeos-breadcrumb,
+html[data-theme="dark"] .lifeos-topbar-heading > p {
+  color: #b9afc8;
+}
+
+html[data-theme="dark"] .lifeos-app input,
+html[data-theme="dark"] .lifeos-app select,
+html[data-theme="dark"] .lifeos-app textarea {
+  color: #f1edf8;
+  color-scheme: dark;
+  background-color: #302b3b;
+  border-color: #51465d;
+}
+
+html[data-theme="dark"] .lifeos-app select option {
+  color: #f1edf8;
+  background: #302b3b;
+}
+
+@media (max-width: 900px) {
+  .lifeos-sidebar {
+    flex-basis: 245px !important;
+  }
+
+  .lifeos-content {
+    padding: 22px;
+  }
+
+  .lifeos-status-pill {
+    display: none;
+  }
+}
+
+@media (max-width: 700px) {
+  .lifeos-sidebar {
+    display: none !important;
+  }
+
+  .lifeos-topbar {
+    min-height: 70px;
+    padding: 12px 14px;
+  }
+
+  .lifeos-mobile-menu-button {
+    display: grid;
+  }
+
+  .lifeos-topbar-heading {
+    flex: 1;
+  }
+
+  .lifeos-topbar-heading > p {
+    font-size: 11px;
+  }
+
+  .lifeos-theme-toggle {
+    width: 40px;
+    height: 40px;
+  }
+
+  .lifeos-mobile-menu {
+    display: block;
+    padding: 12px 14px;
+    border-bottom: 1px solid #e9e1f2;
+  }
+
+  .lifeos-mobile-menu .lifeos-nav-link {
+    min-height: 44px;
+  }
+
+  .lifeos-content {
+    padding: 18px 14px;
+  }
+
+  .lifeos-app-footer {
+    margin: 0 14px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: .01ms !important;
+    transition-duration: .01ms !important;
+  }
+}
